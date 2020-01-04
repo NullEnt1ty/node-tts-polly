@@ -1,0 +1,19 @@
+{
+  "name": "tts-polly",
+  "version": "1.0.0",
+  "description": "",
+  "main": "src/app.js",
+  "scripts": {
+    "start": "node src/app.js"
+  },
+  "bin": "dist/app.js",
+  "author": "Dominique Mattern <dominique@mattern.dev>",
+  "license": "MIT",
+  "devDependencies": {
+    "@types/node": "^13.1.2",
+    "typescript": "^3.7.4"
+  },
+  "dependencies": {
+    "aws-sdk": "^2.597.0"
+  }
+}
