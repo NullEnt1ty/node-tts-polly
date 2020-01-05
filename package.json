@@ -4,7 +4,6 @@
   "description": "",
   "main": "src/app.js",
   "scripts": {
-    "start": "node src/app.js",
     "build": "tsc",
     "prepare": "npm run build"
   },
