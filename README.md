@@ -44,3 +44,14 @@ $ export AWS_SDK_LOAD_CONFIG=1
 
 For more information see this article:
 https://docs.aws.amazon.com/cli/latest/userguide/cli-configure-files.html
+
+## Configuration
+
+The used voice can be configured by editing `src/app.ts`. There will be a proper
+CLI in the future.
+
+## Additional information
+
+Speech data will be cached in `$tmp_dir/node-tts-polly/cache`. Node TTS Polly
+won't make another request to AWS if the text was already synthesized in the
+past. This helps to minimize cost, traffic and processing time.
