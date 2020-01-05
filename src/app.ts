@@ -6,6 +6,7 @@ import { SynthesizeSpeechInput } from 'aws-sdk/clients/polly';
 import { spawn } from 'child_process';
 import crypto from 'crypto';
 import fs from 'fs';
+import os from 'os';
 import path from 'path';
 import process from 'process';
 import { Stream } from 'stream';
@@ -26,14 +27,14 @@ function getFilenameForText(text: string, voice: string, format: string): string
 }
 
 function getCacheDirPath(): string {
-  return 'cache';
+  return path.join(os.tmpdir(), 'node-tts-polly', 'cache');
 }
 
 function ensureCacheDirExists(): void {
   const cacheDirPath = getCacheDirPath();
 
   if (!fs.existsSync(cacheDirPath)) {
-    fs.mkdirSync(cacheDirPath);
+    fs.mkdirSync(cacheDirPath, { recursive: true });
   }
 }
 
@@ -69,6 +70,7 @@ async function main() {
 
   if (fs.existsSync(cachedFilePath)) {
     log('Found cached file!');
+    log(cachedFilePath);
 
     const cachedFileStream = fs.createReadStream(cachedFilePath);
     cachedFileStream.pipe(process.stdout);
