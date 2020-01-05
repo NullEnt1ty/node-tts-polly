@@ -4,7 +4,9 @@
   "description": "",
   "main": "src/app.js",
   "scripts": {
-    "start": "node src/app.js"
+    "start": "node src/app.js",
+    "build": "tsc",
+    "prepare": "npm run build"
   },
   "bin": "dist/app.js",
   "author": "Dominique Mattern <dominique@mattern.dev>",
