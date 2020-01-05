@@ -16,5 +16,9 @@
   },
   "dependencies": {
     "aws-sdk": "^2.597.0"
-  }
+  },
+  "files": [
+    "dist/**/*",
+    "LICENSE"
+  ]
 }
