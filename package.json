@@ -10,6 +10,7 @@
   "bin": "dist/app.js",
   "author": "Dominique Mattern <dominique@mattern.dev>",
   "license": "MIT",
+  "repository": "git://github.com/NullEnt1ty/node-tts-polly.git",
   "devDependencies": {
     "@types/node": "^13.1.2",
     "typescript": "^3.7.4"
